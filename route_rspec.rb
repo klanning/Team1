@@ -1,11 +1,10 @@
-require 'route'
+require './route'
 
 describe Route do
   
   before(:each) do
     start_address = "923 Market St. SF, CA"
     end_address = "100 California St. SF, CA"
-    
     @route = Route.new(start_address, end_address)
   end
       
@@ -23,8 +22,12 @@ describe Route do
     @route.destination.should == "100 California St. SF, CA"
   end
   
-  it "should have a cost"
+  it "should have a cost" do
+    @route.cost.should_not == nil
+  end
   
-  it "should have an estimated time"
+  it "should have an estimated time" do
+    @route.estimated_time.should_not == nil
+  end
   
 end
