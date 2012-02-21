@@ -1,12 +1,11 @@
 class Route
-attr_accessor :origin, :destination, :cost, :estimated_time
+attr_reader :origin, :destination, :cost_in_pennies, :time_in_seconds
 
-  def initialize(start_address, end_address, cost = 1, estimated_time = 1)
-    @origin = start_address
-    @destination = end_address
-    @cost = cost
-    @estimated_time = estimated_time
+  def initialize(origin, destination, cost_in_pennies, time_in_seconds)
+    @origin = origin
+    @destination = destination
+    @cost_in_pennies = cost_in_pennies
+    @time_in_seconds = time_in_seconds
   end
-
 
 end
