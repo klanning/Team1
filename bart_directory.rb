@@ -10,7 +10,7 @@ class BartDirectory
     
     populate_directory
   end
-  
+
   def populate_directory
     stations_uri = 'http://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V'
     
@@ -21,6 +21,7 @@ class BartDirectory
     @station_addresses.length.times do |i|
       @address_to_abbr[@station_addresses[i]] = @station_abbrs[i]
     end
+    
   end
   
   def bart_address?(address)
@@ -34,6 +35,5 @@ class BartDirectory
   def closest_bart_to_destination(address)
     
   end
-     
-  
+
 end
