@@ -2,11 +2,8 @@ require './route'
 
 describe Route do
 
-  describe 'Route' do
     before :all do
        @driving_route = DriveRoute.new("923 Market St., San Francisco, CA", "1703 Telegraph Avenue, Oakland, CA")
-       gas_price_stub = mock "gas_price"
-       gas_price_stub.stub!(:find_gas_price).and_yield(4.16)
            
      end
 
@@ -26,4 +23,3 @@ describe Route do
 
   end
   
-end

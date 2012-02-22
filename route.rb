@@ -2,10 +2,10 @@ require 'faraday'
 require 'json'
 require 'net/http'
 require 'uri'
-# require './gas_price'
 
 class Route
-attr_reader :origin, :destination, :cost_in_pennies, :time_in_seconds
+  
+  attr_reader :origin, :destination, :cost_in_pennies, :time_in_seconds
 
   def initialize(origin, destination, cost_in_pennies, time_in_seconds)
     @origin = origin
@@ -14,3 +14,5 @@ attr_reader :origin, :destination, :cost_in_pennies, :time_in_seconds
     @time_in_seconds = time_in_seconds
   end  
 end
+
+
