@@ -2,6 +2,7 @@
 
 start_addrss = "923 market sf"
 end_addrss = "509 n st"
+route = Route.new
 driving_route = Route.driving(start_addrss, end_addrss)
 barting_route = Route.barting(start_addrss,endaddrss,:bart)
 

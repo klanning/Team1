@@ -1,3 +1,8 @@
+require 'faraday'
+require 'json'
+require 'net/http'
+require 'uri'
+
 class Route
   
   attr_reader :origin, :destination, :cost_in_pennies, :time_in_seconds
