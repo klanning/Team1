@@ -1,11 +1,14 @@
 require 'nokogiri'
 require 'open-uri'
 require './route'
+require './bart_directory'
 require 'time'
 
 class BartRoute < Route
   
   def initialize(origin, destination)
+    
+    @directory = BartDirectory.new
     
     @origin = origin
     @destination = destination
@@ -16,8 +19,8 @@ class BartRoute < Route
   end
 
   def calculate_bart_time(origin, destination)
-    origin_station_abbr = find_station_abbr(origin)
-    destination_station_abbr = find_station_abbr(destination)
+    origin_station_abbr = @directory.get_abbr(origin)
+    destination_station_abbr = @directory.get_abbr(destination)
     
     time_uri = "http://api.bart.gov/api/sched.aspx?cmd=depart&orig=#{origin_station_abbr}&dest=#{destination_station_abbr}&key=MW9S-E7SL-26DU-VV8V"
 
@@ -38,8 +41,8 @@ class BartRoute < Route
 
   def calculate_bart_cost(origin, destination)
 
-    origin_station_abbr = find_station_abbr(origin)
-    destination_station_abbr = find_station_abbr(destination)
+    origin_station_abbr = @directory.get_abbr(origin)
+    destination_station_abbr = @directory.get_abbr(destination)
 
     costs_uri = "http://api.bart.gov/api/sched.aspx?cmd=fare&orig=#{origin_station_abbr}&dest=#{destination_station_abbr}&key=MW9S-E7SL-26DU-VV8V"
 
@@ -49,24 +52,5 @@ class BartRoute < Route
     cost_in_pennies = (fare_in_dollars * 100).to_i
 
   end  
-
-  def find_station_abbr(address)
-    
-    address_to_abbr = {}
-    station_addresses = []
-    station_abbrs = []
-
-    stations_uri = 'http://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V'
-    
-    doc = Nokogiri::HTML(open(stations_uri))
-    doc.xpath('//address').each {|address| station_addresses << address.content }
-    doc.xpath('//abbr').each {|abbr| station_abbrs << abbr.content }    
-
-    station_addresses.length.times do |i|
-      address_to_abbr[station_addresses[i]] = station_abbrs[i]
-    end
-    address_to_abbr[address]
-
-  end
 
 end

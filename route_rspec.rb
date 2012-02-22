@@ -1,4 +1,5 @@
 require './route'
+require './drive_route'
 
 describe Route do
   
@@ -10,9 +11,11 @@ describe Route do
     destination = "100 California St. SF, CA"
     destination2 = "A galaxy far far away..."
     
+    
     @route1 = Route.new(origin,destination,150,100)
     @route2 = Route.new(origin,destination,150,100)
     @route3 = Route.new(origin,destination2,100,100)
+    @route4 = Route.new(origin,destination,100,300)
   end
   
   it "when passed a driving route, returns a route object" do
@@ -37,7 +40,9 @@ describe Route do
     it "shouldn't be able to compare routes to different places" do
       @route3.compare(@route2).should == "These routes are inherently different. You can't compare apples and oranges!"
     end
+    
+    it "should weight cost more heavily than time" do
+      @route1.compare(@route4).should == @route4
+    end
   end
-  
 end
-  

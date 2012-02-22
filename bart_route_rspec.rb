@@ -28,4 +28,11 @@ describe BartRoute do
     # Guessing these times BECAUSE I DON"T KNOW THE ACTUAL TIMES OK!?!?
     bart_route.time_in_seconds.should be_within(180).of(181)
   end
+  
+  it "should calculate a subroute if the origin or destination isn't a bart station" do
+    origin = "Fair Oaks St"
+    destination = "2901 Diamond Street"
+    bart_route = BartRoute.new(origin, destination)
+    bart_route.time_in_seconds.should > 181
+  end
 end
