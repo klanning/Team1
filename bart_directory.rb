@@ -24,12 +24,16 @@ class BartDirectory
   end
   
   def bart_address?(address)
-    @station_addresses.include?(address)
+    @station_addresses.include?(address) ? address : nil
   end
   
   def get_abbr(address)
     @address_to_abbr[address]
-  end  
+  end 
+  
+  def closest_bart_to_destination(address)
+    
+  end
      
   
 end

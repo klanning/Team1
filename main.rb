@@ -13,7 +13,7 @@ public_transportation_route = PublicRoute.new(origin,destination)
  
  call walk_route(origin, closest_bart_station)
  call bart_route(closest_bart_station_to_origin,closest_bart_station_to_destination)
- call walk_route(closest_bart_station_to_destination, destination)
+ call walk_route(closest_bart_station_to_destinationgit , destination)
  
  total route = walk_route_origin + bart_route + walk_route_destination 
 
