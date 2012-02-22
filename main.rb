@@ -1,22 +1,21 @@
-require './drive_route'
+require './route'
+puts "Hello there you useless pile of organic matter. \n Welcome to the Bart or Drive calculator."
 
+puts "Please enter your starting address:"
+origin = gets.chomp
 
-origin = "address"
-destination = "address"
+puts "Please enter your ending address."
+destination = gets.chomp
 
+puts "Computing Drive Route....."
 drive_route = DriveRoute.new(origin,destination)
+puts "Computing Bart Route....."
 public_transportation_route = PublicRoute.new(origin,destination)
- check if origin is bart station, call bart_route(origin, destination)
- check if destination is bart station call bart_route(origin, destination)
- 
- otherwise
- 
- call walk_route(origin, closest_bart_station)
- call bart_route(closest_bart_station_to_origin,closest_bart_station_to_destination)
- call walk_route(closest_bart_station_to_destinationgit , destination)
- 
- total route = walk_route_origin + bart_route + walk_route_destination 
 
-
-
-puts public_transportation_route.compare(drive_route)
+puts "Driving time: " + (drive_route.calc_drive_time * 60).to_s + " minutes"
+puts "Driving cost: $" + (drive_route.calc_drive_cost * 100).to_s
+puts "---"
+puts "Bart time: " + (bart_route.time_in_seconds * 100).to_s
+puts "Bart cost: " + (bart_route.cost_in_pennies * 60).to_s + " minutes"
+puts "Decision:"
+puts  (drive_route.compare(public_transportation_route).class == DriveRoute ? "DRIVE" : "BART")
