@@ -25,7 +25,6 @@ describe BartRoute do
     origin = "2800 Mission Street"
     destination = "2901 Diamond Street"
     bart_route = BartRoute.new(origin, destination)
-    # Guessing these times BECAUSE I DON"T KNOW THE ACTUAL TIMES OK!?!?
     bart_route.time_in_seconds.should be_within(180).of(181)
   end
   

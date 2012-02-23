@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require './google_directions_wrapper'
 
 class BartDirectory
   
@@ -32,8 +33,14 @@ class BartDirectory
     @address_to_abbr[address]
   end 
   
-  def closest_bart_to_destination(address)
-    
+  def closest_station(address)
+    walktime_to_stations = {}
+    @station_addresses.each do |station_address|
+      walking_time = GoogleDirectionsWrapper.new(address, station_address + " California", "walking").route_time
+      walktime_to_stations[walking_time] = station_address
+      sleep 0.5
+    end
+    walktime_to_stations[walktime_to_stations.keys.sort[0]]
   end
 
 end
