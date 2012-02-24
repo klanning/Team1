@@ -23,6 +23,9 @@ describe 'GoogleDirectionsWrapper' do
     @wrapper.origin_zipcode.should == "94103"
   end
 
+  it "#origin_lat_longs should return the latitude and longitude of an address" do
+    @wrapper.origin_lat_longs.should == {"lat" => 37.78355000000001, "lng" => -122.408640}
+  end
 end
 
-  
+#Latest thing we got done: we can now pull in the lat long of an address, but now we need to format that result into the same format as our @station_address_to_lat_long list. 2/24 @ 6:23 PM  

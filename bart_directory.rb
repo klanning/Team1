@@ -9,6 +9,9 @@ class BartDirectory
     @station_addresses = []
     @station_abbrs = []
     
+    @address_to_lat_long = {}
+    @station_lat_longs = []
+    
     populate_directory
   end
 
@@ -23,6 +26,15 @@ class BartDirectory
       @address_to_abbr[@station_addresses[i]] = @station_abbrs[i]
     end
     
+    
+    @station_lat_longs = doc.xpath('//station').map do |station|
+         {:lat => station.css('gtfs_latitude')[0].content, :long => station.css('gtfs_longitude')[0].content}  
+    end
+      
+    @station_addresses.length.times do |i|
+      @address_to_lat_long[@station_addresses[i]] = @station_lat_longs[i]
+    end
+     
   end
   
   def bart_address?(address)
@@ -34,13 +46,23 @@ class BartDirectory
   end 
   
   def closest_station(address)
-    walktime_to_stations = {}
-    @station_addresses.each do |station_address|
-      walking_time = GoogleDirectionsWrapper.new(address, station_address + " California", "walking").route_time
-      walktime_to_stations[walking_time] = station_address
-      sleep 0.25
-    end
-    walktime_to_stations[walktime_to_stations.keys.sort[0]]
+    
   end
+  
+  def get_lat_long(origin)
+    
+  end
+  
+  
+  
+  # def closest_station(address)
+  #   walktime_to_stations = {}
+  #   @station_addresses.each do |station_address|
+  #     walking_time = GoogleDirectionsWrapper.new(address, station_address + " California", "walking").route_time
+  #     walktime_to_stations[walking_time] = station_address
+  #     sleep 0.25
+  #   end
+  #   walktime_to_stations[walktime_to_stations.keys.sort[0]]
+  # end
 
 end

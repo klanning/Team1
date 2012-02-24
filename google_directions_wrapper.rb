@@ -34,5 +34,8 @@ class GoogleDirectionsWrapper
     @response_json['routes'][0]['legs'][0]['start_address'].split[-2][0..-2]
   end
   
+  def origin_lat_longs
+    @response_json['routes'][0]['legs'][0]['start_location']
+  end
 
 end

@@ -1,0 +1,302 @@
+{
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 37.82754000000001,
+               "lng" : -122.269010
+            },
+            "southwest" : {
+               "lat" : 37.782020,
+               "lng" : -122.408640
+            }
+         },
+         "copyrights" : "Map data ©2012 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "10.4 mi",
+                  "value" : 16662
+               },
+               "duration" : {
+                  "text" : "19 mins",
+                  "value" : 1140
+               },
+               "end_address" : "1703 Telegraph Ave, Oakland, CA 94612, USA",
+               "end_location" : {
+                  "lat" : 37.806880,
+                  "lng" : -122.270230
+               },
+               "start_address" : "923 Market St, San Francisco, CA 94103, USA",
+               "start_location" : {
+                  "lat" : 37.78355000000001,
+                  "lng" : -122.408640
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.2 mi",
+                        "value" : 342
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 34
+                     },
+                     "end_location" : {
+                        "lat" : 37.785730,
+                        "lng" : -122.405890
+                     },
+                     "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eMarket St\u003c/b\u003e toward \u003cb\u003e5th St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "erreF~|bjVkA_BOQIMiAcBOUg@o@{CaE_@e@OS"
+                     },
+                     "start_location" : {
+                        "lat" : 37.78355000000001,
+                        "lng" : -122.408640
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 mi",
+                        "value" : 586
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 72
+                     },
+                     "end_location" : {
+                        "lat" : 37.782020,
+                        "lng" : -122.401160
+                     },
+                     "html_instructions" : "Take the 2nd \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003e4th St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "y_seFxkbjV@CXs@z@kAfAsAtAgBHKpAgBzCgE`DiEfAyALQ"
+                     },
+                     "start_location" : {
+                        "lat" : 37.785730,
+                        "lng" : -122.405890
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 mi",
+                        "value" : 691
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 120
+                     },
+                     "end_location" : {
+                        "lat" : 37.786420,
+                        "lng" : -122.395610
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eFolsom St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "shreFfnajVYa@aB{BcF}GaB{BqAaBkDaFaC_DSYY_@"
+                     },
+                     "start_location" : {
+                        "lat" : 37.782020,
+                        "lng" : -122.401160
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 mi",
+                        "value" : 192
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 23
+                     },
+                     "end_location" : {
+                        "lat" : 37.785250,
+                        "lng" : -122.394010
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eEssex St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "cdseFpk`jVrDeFf@s@Le@"
+                     },
+                     "start_location" : {
+                        "lat" : 37.786420,
+                        "lng" : -122.395610
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 mi",
+                        "value" : 220
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 29
+                     },
+                     "end_location" : {
+                        "lat" : 37.785470,
+                        "lng" : -122.391570
+                     },
+                     "html_instructions" : "Take the \u003cb\u003eInterstate 80 E\u003c/b\u003e ramp to \u003cb\u003eBay Bridge/Oakland\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "y|reFpa`jV@CJk@@s@EyAEqACWCOGk@?COm@Gg@Gi@"
+                     },
+                     "start_location" : {
+                        "lat" : 37.785250,
+                        "lng" : -122.394010
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "5.8 mi",
+                        "value" : 9263
+                     },
+                     "duration" : {
+                        "text" : "8 mins",
+                        "value" : 479
+                     },
+                     "end_location" : {
+                        "lat" : 37.825170,
+                        "lng" : -122.304570
+                     },
+                     "html_instructions" : "Merge onto \u003cb\u003eI-80 E\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "e~reFhr_jVISGKEIOU]a@y@kAqA_BQSwC}CwC_DmAoAOQIIQSUUcAeAcMkNc@g@WYe@i@[[[]{BeC]_@_@a@IIk@o@EEyGkHc@g@MMq@u@}AcBeH{HeAgAcAiAs[y]]a@GGUW_]e_@oAmAo@u@IIeBiBWYe@e@KMY[mBuBk@o@UU]g@[i@Wc@q@uAWi@AEMYEIGMe@cAe@m@e@m@uAqAwAuAmAeAOOAAGGEEY_@Yi@]k@Um@?C]wAAIKYc@wBAEOm@]aBoBwIwCuMkIw_@wHa]k@iCUuAMeAMmAcE}e@g@_GuCo\\C_@Ec@Ec@AM?GAiBA_CAa@AQwE_i@o@eGiAsLuBiSuCg\\IuA{@iP]eEEc@K}@Q}AKq@"
+                     },
+                     "start_location" : {
+                        "lat" : 37.785470,
+                        "lng" : -122.391570
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.8 mi",
+                        "value" : 2892
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 138
+                     },
+                     "end_location" : {
+                        "lat" : 37.825270,
+                        "lng" : -122.272920
+                     },
+                     "html_instructions" : "Take exit \u003cb\u003e8B\u003c/b\u003e to merge onto \u003cb\u003eI-580 E\u003c/b\u003e toward \u003cb\u003eCA-24/Hayward/Stockton\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "ivzeFprniVIuAk@gFm@aGc@wDa@mDMaAOiAa@_D_@qCa@oCc@qBq@wB]kAWkAOaAKsAEuABsAJsAJ_A@ILu@V}@v@}B@ADMBMBC?ALc@Le@DMZsAT{A@MB_@Da@D_BA_A?y@?k@Ci@Eo@G_AGm@OkAQaBgAyJI}@e@yDKqBC{@@qBJcBBe@F_@VgBVoB@Gz@_GF_@l@aEnAwIVkBDUlBcL"
+                     },
+                     "start_location" : {
+                        "lat" : 37.825170,
+                        "lng" : -122.304570
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.6 mi",
+                        "value" : 887
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 49
+                     },
+                     "end_location" : {
+                        "lat" : 37.819060,
+                        "lng" : -122.27020
+                     },
+                     "html_instructions" : "Take exit \u003cb\u003e19C\u003c/b\u003e toward \u003cb\u003eDowntown Oakland/I-980 W\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "}vzeFvlhiVf@}B^_Bt@uE\\gADOJYFMPWHKBGFGRULMj@]XMf@QXGPANA`@?f@BrC\\l@Fj@DhHlApB^zAV"
+                     },
+                     "start_location" : {
+                        "lat" : 37.825270,
+                        "lng" : -122.272920
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 mi",
+                        "value" : 805
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 77
+                     },
+                     "end_location" : {
+                        "lat" : 37.812260,
+                        "lng" : -122.271490
+                     },
+                     "html_instructions" : "Keep \u003cb\u003eright\u003c/b\u003e at the fork, follow signs for \u003cb\u003e27th St/W Grand Ave\u003c/b\u003e and merge onto \u003cb\u003eNorthgate Ave\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "cpyeFv{giVTPB@rBv@B@hCf@vBh@d@FZAVCZOLMZWFIHGDE^]LILI\\KRCNAT@hDb@|@FZF^FTFB?NFHDB?HFRJ^Tb@\\VP^L|Aj@PDHB"
+                     },
+                     "start_location" : {
+                        "lat" : 37.819060,
+                        "lng" : -122.27020
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 mi",
+                        "value" : 223
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 27
+                     },
+                     "end_location" : {
+                        "lat" : 37.811830,
+                        "lng" : -122.269010
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eW Grand Ave\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "sexeFxchiVB_@lAwLBW"
+                     },
+                     "start_location" : {
+                        "lat" : 37.812260,
+                        "lng" : -122.271490
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 mi",
+                        "value" : 561
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 92
+                     },
+                     "end_location" : {
+                        "lat" : 37.806880,
+                        "lng" : -122.270230
+                     },
+                     "html_instructions" : "Take the 1st \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eTelegraph Ave\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "}bxeFhtgiVLB|AVn@JnC\\tCh@xB\\xB\\j@JpBZhC^"
+                     },
+                     "start_location" : {
+                        "lat" : 37.811830,
+                        "lng" : -122.269010
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "erreF~|bjV{AqBsAqBsFmHOS@CXs@z@kA|C{DzAsBrK}NaMwPqAaBkDaFuCyDY_@rDeFf@s@Le@Lo@@s@EyAIiBK{@Oq@OqAg@_AwAmBcBsBmK_LuByBePwQmHaIk[i]o]{_@_]e_@oAmAy@_AoDwDiEwEy@qAiAyBm@sAm@qAkA{AmDgD}AuAi@o@w@uAUq@_@aBKYc@wBQs@mCyLcNmn@cJka@c@{CqEkh@gEsf@Gq@AqBCaDyEqi@yByTuBiSuCg\\eA_Sc@iF]{CKq@IuAyAiNeAeJ_B}La@oCc@qBoAcEg@mCKsAEuABsAJsALiALu@V}@x@_CLa@|@kDViBHaAD_BA_A?eBYgEsBeRe@yDKqBC{@@qBNiC^gC|AwKzC{SlBcLf@}B^_Bt@uEb@wARg@f@s@`@c@dAk@`AY`@ChAB`Ed@j@DhHlAlEv@XRvBx@hCf@vBh@d@FZAVCZOh@e@v@u@ZSp@Od@?hDb@|@Fz@NXFf@Tr@`@z@n@xCbApAwMBWLBlCb@nC\\tCh@rFz@|Cf@hC^"
+         },
+         "summary" : "I-80 E",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
