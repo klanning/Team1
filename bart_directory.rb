@@ -9,6 +9,10 @@ class BartDirectory
     @station_addresses = []
     @station_abbrs = []
     
+    @address_to_lat_long = {}
+    @station_lat_longs = []
+    @origin_address_lat_long = {}
+    
     populate_directory
   end
 
@@ -23,6 +27,15 @@ class BartDirectory
       @address_to_abbr[@station_addresses[i]] = @station_abbrs[i]
     end
     
+    
+    @station_lat_longs = doc.xpath('//station').map do |station|
+         {"lat" => station.css('gtfs_latitude')[0].content.to_f, "lng" => station.css('gtfs_longitude')[0].content.to_f}  
+    end
+      
+    @station_addresses.length.times do |i|
+      @address_to_lat_long[@station_addresses[i]] = @station_lat_longs[i]
+    end
+     puts @address_to_lat_long
   end
   
   def bart_address?(address)
@@ -33,17 +46,31 @@ class BartDirectory
     @address_to_abbr[address]
   end 
   
+  
+  def get_lat_long(address)
+    GoogleDirectionsWrapper.new(address, address , "driving").origin_lat_longs
+    
+  end
+    
   def closest_station(address)
-    walktime_to_stations = {}
-    @station_addresses.each do |station_address|
-      wrapper = GoogleDirectionsWrapper.new(address, station_address + " California", "walking")
-      wrapper.fetch
-      walking_time = wrapper.route_time
-      walktime_to_stations[walking_time] = station_address
-      sleep 0.3
+    address_lat_long = get_lat_long(address)
+    current_min_distance = nil
+    current_nearest_station = nil
+    @address_to_lat_long.each do |station_address, station_lat_long|
+      station_distance = compare_lat_longs(address_lat_long, station_lat_long)
+      if (current_min_distance == nil or station_distance < current_min_distance)
+        current_min_distance = station_distance
+        current_nearest_station = station_address
+      end
     end
-    puts walktime_to_stations.keys.sort
-    walktime_to_stations[walktime_to_stations.keys.sort[0]]
+    current_nearest_station  
+  end
+  
+  def compare_lat_longs(origin_lat_long, station_address_lat_long)
+    lat_difference = (origin_lat_long["lat"] - station_address_lat_long["lat"]).abs
+    long_difference = (origin_lat_long["lng"] - station_address_lat_long["lng"]).abs
+    sum_of_differences = lat_difference + long_difference
+    sum_of_differences
   end
 
 end
