@@ -26,6 +26,9 @@ describe 'GoogleDirectionsWrapper' do
     @wrapper.origin_zipcode.should == "94103"
   end
 
+  it "#origin_lat_longs should return the latitude and longitude of an address" do
+    @wrapper.origin_lat_longs.should == {"lat" => 37.78355000000001, "lng" => -122.408640}
+  end
 end
 
   
