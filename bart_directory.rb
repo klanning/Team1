@@ -36,10 +36,13 @@ class BartDirectory
   def closest_station(address)
     walktime_to_stations = {}
     @station_addresses.each do |station_address|
-      walking_time = GoogleDirectionsWrapper.new(address, station_address + " California", "walking").route_time
+      wrapper = GoogleDirectionsWrapper.new(address, station_address + " California", "walking")
+      wrapper.fetch
+      walking_time = wrapper.route_time
       walktime_to_stations[walking_time] = station_address
-      sleep 0.25
+      sleep 0.3
     end
+    puts walktime_to_stations.keys.sort
     walktime_to_stations[walktime_to_stations.keys.sort[0]]
   end
 

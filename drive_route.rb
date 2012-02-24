@@ -9,6 +9,7 @@ class DriveRoute < Route
 
 	def initialize(origin, destination)
 	  @google_directions = GoogleDirectionsWrapper.new(origin, destination, "driving")
+	  @google_directions.fetch
 	  @origin = origin
     @destination = destination
     
@@ -25,7 +26,7 @@ class DriveRoute < Route
 	def calc_drive_cost()
 	  distance_in_miles = @google_directions.route_distance
 	  zipcode = @google_directions.origin_zipcode
-	  cost_of_gas = (distance_in_miles / 25 * ( 100 * GasPrice.find_gas_price(zipcode))).to_i   # assumes 25mpg at $4/gallon (400 pennies)
+	  (distance_in_miles / 25 * ( 100 * GasPrice.find_gas_price(zipcode))).to_i   # assumes 25mpg at $4/gallon (400 pennies)
 	end
 
 end
